@@ -45,14 +45,14 @@ def before_request():
 def not_found(error) -> str:
     """Page not found handler
     """
-    return jsonify({"error": "Not found"}, description="error"), 404
+    return jsonify({"error": "Not found"}), 404
 
 
 @app.errorhandler(401)
 def unauthorized(error) -> str:
     """Unauthorized handler
     """
-    return jsonify({"error": "Unauthorized"}, description="error"), 401
+    return jsonify({"error": "Unauthorized"}), 401
 
 
 @app.errorhandler(403)
